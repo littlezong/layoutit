@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>可视化布局</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/layoutit.css" rel="stylesheet"/>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/drag_it.js"></script>
+		<script src="js/configuration_event.js"></script>
+	</head>
+	<body style="cursor: auto;" class="edit">
+		<nav class="navbar navbar-default navbar-fixed-top" style="z-index: 1000;">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		            <span class="sr-only">导航收缩</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="#">旗舰店自定义布局</a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav">
+		            <li class="active">
+		            	<a href="#" rel="edit">编辑</a>
+		            </li>
+		            <li>
+		            	<a href="#" rel="ly-preview">预览</a>
+		            </li>
+		            <li>
+		            	<a href="#">保存</a>
+		            </li>
+		            <li>
+		            	<a href="#" id="clearLayout">清空</a>
+		            </li>
+		          </ul>
+		          <ul class="nav navbar-nav navbar-right">
+		            <li>
+		            	<a href="#">首页</a>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+	    </nav>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<!--左栏列表-->
+				<div class="col-sm-3 col-md-2 widget-bar">
+					<ul class="nav sidebar">
+						<!--布局设置-->
+						<li>
+							<i class="glyphicon glyphicon-plus pull-left"></i>
+							<a role="button" data-toggle="collapse" href="#layout-setting" aria-expanded="false" aria-controls="layout-setting">
+								布局设置
+							</a>
+							<div class="icon-popover">
+								<i class="glyphicon glyphicon-question-sign pull-right"></i>
+								<div class="popover fade right">
+									<i class="arrow glyphicon glyphicon-triangle-left"></i>
+									<h4 class="popover-title">功能</h4>
+									<div class="popover-content">
+										在这里设置你的栅格布局, 栅格总数默认为12, 基本样式和组件须放置在栅格布局中。
+									</div>
+								</div>
+							</div>
+						</li>
+						<!--布局设置 下拉列表-->
+						<ul class="collapse" id="layout-setting">
+						   <!--col-12-->
+						   <li>
+						   		<div class="draggable nessesary">
+						   			<a href="javascript:void(0);" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="preview">
+						   				<input value="12" type="text" disabled="disabled" />
+						   			</div>
+						   			<div class="view">
+						   				<div class="row-fluid clearfix">
+						   					<div class="span12 column"></div>
+						   				</div>
+						   			</div>
+						   		</div>
+						   </li>
+						   <!--col-6 6-->
+						   <li>
+						   		<div class="draggable nessesary">
+						   			<a href="javascript:void(0);" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="preview">
+						   				<input value="6 6" type="text" disabled="disabled" />
+						   			</div>
+						   			<div class="view">
+						   				<div class="row-fluid clearfix">
+						   					<div class="span6 column"></div>
+						   					<div class="span6 column"></div>
+						   				</div>
+						   			</div>
+						   		</div>
+						   </li>
+						   <!--col-8 4-->
+						   <li>
+						   		<div class="draggable nessesary">
+						   			<a href="javascript:void(0);" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="preview">
+						   				<input value="8 4" type="text" disabled="disabled" />
+						   			</div>
+						   			<div class="view">
+						   				<div class="row-fluid clearfix">
+						   					<div class="span8 column"></div>
+						   					<div class="span4 column"></div>
+						   				</div>
+						   			</div>
+						   		</div>
+						   </li>
+						   <!--col-4 8-->
+						   <li>
+						   		<div class="draggable nessesary">
+						   			<a href="javascript:void(0);" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="preview">
+						   				<input value="4 8" type="text" disabled="disabled" />
+						   			</div>
+						   			<div class="view">
+						   				<div class="row-fluid clearfix">
+						   					<div class="span4 column"></div>
+						   					<div class="span8 column"></div>
+						   				</div>
+						   			</div>
+						   		</div>
+						   </li>
+						   <!--col-4 4 4-->
+						   <li>
+						   		<div class="draggable nessesary">
+						   			<a href="javascript:void(0);" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="preview">
+						   				<input value="4 4 4" type="text" disabled="disabled" />
+						   			</div>
+						   			<div class="view">
+						   				<div class="row-fluid clearfix">
+						   					<div class="span4 column"></div>
+						   					<div class="span4 column"></div>
+						   					<div class="span4 column"></div>
+						   				</div>
+						   			</div>
+						   		</div>
+						   </li>
+						   <!--col-2 2 2 2 2 2-->
+						   <!--<li>
+						   		<div class="draggable nessesary">
+						   			<a href="javascript:void(0);" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="preview">
+						   				<input value="2 2 2 2 2 2" type="text" disabled="disabled" />
+						   			</div>
+						   			<div class="view">
+						   				<div class="row-fluid clearfix">
+						   					<div class="span2 column"></div>
+						   					<div class="span2 column"></div>
+						   					<div class="span2 column"></div>
+						   					<div class="span2 column"></div>
+						   					<div class="span2 column"></div>
+						   					<div class="span2 column"></div>
+						   				</div>
+						   			</div>
+						   		</div>
+						   </li>-->
+						</ul>
+						
+						<!--基本样式-->
+						<li>
+							<i class="glyphicon glyphicon-plus pull-left"></i>
+							<a role="button" data-toggle="collapse" href="#base-css" aria-expanded="false" aria-controls="base-css">
+								基本样式
+							</a>
+							<div class="icon-popover">
+								<i class="glyphicon glyphicon-question-sign pull-right"></i>
+								<div class="popover fade right">
+									<i class="arrow glyphicon glyphicon-triangle-left"></i>
+									<h4 class="popover-title">功能</h4>
+									<div class="popover-content">
+										这里提供了一系列基本元素样式，你可以通过区块导航栏的编辑按钮修改样式设置。
+									</div>
+								</div>
+							</div>
+						</li>
+						<!--基本样式 下拉列表-->
+						<ul class="collapse" id="base-css">
+							<!--标题栏-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">编辑</button>
+						   				<div class="btn-group">
+						   					<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">对齐 <span class="caret"></span></a>
+								              <ul class="dropdown-menu">
+								                <li class="active">
+								                	<a href="#" rel="text-left">靠左</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-center">居中</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-right">靠右</a>
+								                </li>
+								              </ul>
+						   				</div>
+						   				<div class="btn-group">
+						   					<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+						   						标记 <span class="caret"></span>
+						   					</a>
+								              <ul class="dropdown-menu">
+								                <li class="active">
+								                	<a href="#" rel="">默认</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="muted">禁用</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-warning">警告</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-error">错误</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-info">提示</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-success">成功</a>
+								                </li>
+								              </ul>
+						   				</div>
+						   			</div>
+						   			<div class="preview">
+						   				标题栏
+						   			</div>
+						   			<div class="view">
+						   				<h4 contenteditable="true">h4.这是一套可视化布局系统</h4>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						   <!--段落-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   				<div class="btn-group">
+						   					<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+						   						对齐 <span class="caret"></span>
+						   					</a>
+								              <ul class="dropdown-menu">
+								                <li class="active">
+								                	<a href="#" rel="text-left">靠左</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-center">居中</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-right">靠右</a>
+								                </li>
+								              </ul>
+						   				</div>
+						   				<div class="btn-group">
+						   					<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+						   						标记 <span class="caret"></span>
+						   					</a>
+								              <ul class="dropdown-menu">
+								                <li class="active">
+								                	<a href="#" rel="">默认</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="muted">禁用</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-warning">警告</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-error">错误</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-info">提示</a>
+								                </li>
+								                <li class="">
+								                	<a href="#" rel="text-success">成功</a>
+								                </li>
+								              </ul>
+						   				</div>
+						   			</div>
+						   			<div class="preview">
+						   				段落
+						   			</div>
+						   			<div class="view" contenteditable="true">
+						   				<p>
+						   					这是一行段落
+						   				</p>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						   <!--图片控件-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   			</div>
+						   			<div class="preview">
+						   				图片
+						   			</div>
+						   			<div class="view">
+						   				 <a class="ad-img-wrapper" href="#">
+						   				 	<img src="img/1.svg" alt=""/>
+						   				 </a>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						   <!--图片控件-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-btn = "edit-link">
+						   					编辑链接地址
+						   				</button>
+						   				<input type="url" placeholder="http://www.hmh1688.com" />
+						   				<input type="button" value="确定" />
+						   			</div>
+						   			<div class="preview">
+						   				链接
+						   			</div>
+						   			<div class="view">
+						   				 <a class="ad-img-wrapper" href="#" contenteditable="true">
+						   				 	这是一个链接
+						   				 </a>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						</ul>
+						
+						<!--组件-->
+						<li>
+							<i class="glyphicon glyphicon-plus pull-left"></i>
+							<a role="button" data-toggle="collapse" href="#widget" aria-expanded="false" aria-controls="widget">
+								组件
+							</a>
+							<div class="icon-popover">
+								<i class="glyphicon glyphicon-question-sign pull-right"></i>
+								<div class="popover fade right">
+									<i class="arrow glyphicon glyphicon-triangle-left"></i>
+									<h4 class="popover-title">功能</h4>
+									<div class="popover-content">
+										在这里添加你的个性组件, 实现店铺的个性效果。
+									</div>
+								</div>
+							</div>
+						</li>
+						<!--组件 下拉列表-->
+						<ul class="collapse" id="widget">
+							
+							<!--导航控件-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   				<span class="btn-group">
+						   					<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+						   						样式 <span class="caret"></span>
+						   					</a>
+							              <ul class="dropdown-menu">
+							                <li class="active">
+							                	<a href="#" rel="nav-tabs">线框</a>
+							                </li>
+							                <li class="">
+							                	<a href="#" rel="nav-pills">图钉</a>
+							                </li>
+							              </ul>
+							            </span>
+						   			</div>
+						   			<div class="preview">
+						   				导航
+						   			</div>
+						   			<div class="view">
+					   				 	<ul class="nav nav-tabs" contenteditable="true">
+						                  <li class="active">
+						                  	<a href="#">首页</a>
+						                  </li>
+						                  <li>
+						                  	<a href="#">资料</a>
+						                  </li>
+						                  <li class="disabled">
+						                  	<a href="#">信息</a>
+						                  </li>
+						                  <li class="dropdown pull-right">
+						                  	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+						                  		下拉 <b class="caret"></b>
+						                  	</a>
+						                    <ul class="dropdown-menu">
+						                      <li>
+						                      	<a href="#">操作</a>
+						                      </li>
+						                      <li>
+						                      	<a href="#">设置栏目</a>
+						                      </li>
+						                      <li>
+						                      	<a href="#">更多设置</a>
+						                      </li>
+						                      <li class="divider"></li>
+						                      <li>
+						                      	<a href="#">分割线</a>
+						                      </li>
+						                    </ul>
+						                  </li>
+						                </ul>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						   <!--导航栏-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   				<div class="btn-group">
+						   					<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+						   						主题 <span class="caret"></span>
+						   					</a>
+								              <ul class="dropdown-menu">
+								                <li class="active">
+								                	<a class="btn btn-mini" href="#" rel="">默认</a>
+								                </li>
+								                <li class="">
+								                	<a class="btn btn-mini" href="#" rel="navbar-inverse">反色</a>
+								                </li>
+								              </ul>
+						   				</div>
+						   			</div>
+						   			<div class="preview">
+						   				导航栏
+						   			</div>
+						   			<div class="view">
+					   				 	<nav class="navbar navbar-default" contenteditable="true">
+										  <div class="container-fluid">
+										    <!-- Brand and toggle get grouped for better mobile display -->
+										    <div class="navbar-header">
+										      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+										        <span class="icon-bar"></span>
+										        <span class="icon-bar"></span>
+										        <span class="icon-bar"></span>
+										      </button>
+										      <a class="navbar-brand" href="#">品牌</a>
+										    </div>
+										
+										    <!-- Collect the nav links, forms, and other content for toggling -->
+										    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										      <ul class="nav navbar-nav">
+										        <li class="active">
+										        	<a href="#">首页</a>
+										        </li>
+										        <li>
+										        	<a href="#">分类</a>
+										        </li>
+										        <li class="dropdown">
+										          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+										          	下拉
+										          	<span class="caret"></span>
+										          </a>
+										          <ul class="dropdown-menu">
+										            <li>
+										            	<a href="#">a</a>
+										            </li>
+										            <li>
+										            	<a href="#">b</a>
+										            </li>
+										            <li>
+										            	<a href="#">c</a>
+										            </li>
+										            <li role="separator" class="divider"></li>
+										            <li>
+										            	<a href="#">分割链接</a>
+										            </li>
+										            <li role="separator" class="divider"></li>
+										            <li>
+										            	<a href="#">再一分割链接</a>
+										            </li>
+										          </ul>
+										        </li>
+										      </ul>
+										      <ul class="nav navbar-nav navbar-right">
+										        <li><a href="#">自定义</a></li>
+										        <li class="dropdown">
+										          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+										          	下拉
+										          	<span class="caret"></span>
+										          </a>
+										          <ul class="dropdown-menu">
+										            <li>
+										            	<a href="#">1</a>
+										            </li>
+										            <li>
+										            	<a href="#">2</a>
+										            </li>
+										            <li>
+										            	<a href="#">3</a>
+										            </li>
+										            <li role="separator" class="divider"></li>
+										            <li>
+										            	<a href="#">4</a>
+										            </li>
+										          </ul>
+										        </li>
+										      </ul>
+										    </div><!-- /.navbar-collapse -->
+										  </div><!-- /.container-fluid -->
+										</nav>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						   <!--轮播组件-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   			</div>
+						   			<div class="preview">
+						   				轮播图
+						   			</div>
+						   			<div class="view">
+						   				 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+											  <!-- Indicators -->
+											  <ol class="carousel-indicators">
+											    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+											    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+											    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+											  </ol>
+											
+											  <!-- Wrapper for slides -->
+											  <div class="carousel-inner" role="listbox">
+											    <div class="item active">
+											      <a href="#">
+												      <img src="img/1.svg" alt="...">
+												      <div class="carousel-caption">
+												        ...
+												      </div>
+											      </a>
+											    </div>
+											    <div class="item">
+											      <a href="#">
+												      <img src="img/2.svg" alt="...">
+												      <div class="carousel-caption">
+												        ...
+												      </div>
+											      </a>
+											    </div>
+											    <div class="item">
+											      <a href="#">
+												      <img src="img/3.svg" alt="...">
+												      <div class="carousel-caption">
+												        ...
+												      </div>
+											      </a>
+											    </div>
+											  </div>
+											
+											  <!-- Controls -->
+											  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+											    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+											  </a>
+											  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+											    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+											  </a>
+										 </div>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+							<!--下拉控件-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   			</div>
+						   			<div class="preview">
+						   				下拉菜单
+						   			</div>
+						   			<div class="view">
+						   				  <button class="btn" contenteditable="true">
+						   				  	下拉菜单
+						   				  </button>
+						                  <button data-toggle="dropdown" class="btn dropdown-toggle">
+						                  	<span class="caret"></span>
+						                  </button>
+						                  <ul class="dropdown-menu" contenteditable="true">
+						                    <li>
+						                    	<a href="#">操作</a>
+						                    </li>
+						                    <li>
+						                    	<a href="#">设置栏目</a>
+						                    </li>
+						                    <li>
+						                    	<a href="#">更多设置</a>
+						                    </li>
+						                    <li class="divider"></li>
+						                    <li class="dropdown-submenu">
+						                    	<a tabindex="-1" href="#">更多选项</a>
+						                      <ul class="dropdown-menu">
+						                        <li>
+						                        	<a href="#">操作</a>
+						                        </li>
+						                        <li>
+						                        	<a href="#">设置栏目</a>
+						                        </li>
+						                        <li>
+						                        	<a href="#">更多设置</a>
+						                        </li>
+						                      </ul>
+						                    </li>
+						                  </ul>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						   <!--标签页组件-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   			</div>
+						   			<div class="preview">
+						   				标签页
+						   			</div>
+						   			<div class="view">
+						   				<div class="tabbable"> <!-- Only required for left/right tabs -->
+						                  <ul class="nav nav-tabs">
+						                    <li class="active">
+						                    	<a href="#tab1" data-toggle="tab" contenteditable="true">
+						                    		热销商品
+						                    	</a>
+						                    </li>
+						                    <li>
+						                    	<a href="#tab2" data-toggle="tab" contenteditable="true">
+						                    		热门收藏
+						                    	</a>
+						                    </li>
+						                  </ul>
+						                  <div class="tab-content">
+						                    <div class="tab-pane active" contenteditable="true">
+						                      <ul style="padding: 10px 0;">
+						                      	<li class="media">
+						                      		<a href="#" class="pull-left">
+						                      			<img src="img/1.svg" class="media-object">
+						                      		</a>
+									                <div class="media-body" contenteditable="true">
+									                   	<dl>
+									                   		<dt class="ellipsis-2">
+									                   			2016年新品男装长袖衬衫 橘色摩登修身衬衫
+									                   		</dt>
+									                   		<dd>
+									                   			¥<b>189.00</b>
+									                   		</dd>
+									                   		<dd>
+									                   			<i class="glyphicon glyphicon-shopping-cart"></i>
+									                   			售出：<b>0</b>笔
+									                   		</dd>
+									                   	</dl> 
+									                </div>
+						                      	</li>
+						                      	<li class="media">
+						                      		<a href="#" class="pull-left">
+						                      			<img src="img/1.svg" class="media-object">
+						                      		</a>
+									                <div class="media-body" contenteditable="true">
+									                   	<dl>
+									                   		<dt class="ellipsis-2">
+									                   			2016年新品男装长袖衬衫 橘色摩登修身衬衫
+									                   		</dt>
+									                   		<dd>
+									                   			¥<b>189.00</b>
+									                   		</dd>
+									                   		<dd>
+									                   			<i class="glyphicon glyphicon-shopping-cart"></i>
+									                   			售出：<b>0</b>笔
+									                   		</dd>
+									                   	</dl> 
+									                </div>
+						                      	</li>
+						                      </ul>
+						                    </div>
+						                    <div class="tab-pane" contenteditable="true">
+						                    	<ul style="padding: 10px 0;">
+							                        <li class="media">
+							                      		<a href="#" class="pull-left">
+							                      			<img src="img/1.svg" class="media-object">
+							                      		</a>
+										                <div class="media-body" contenteditable="true">
+										                   	<dl>
+										                   		<dt class="ellipsis-2">
+										                   			2016年新品男装长袖衬衫 橘色摩登修身衬衫
+										                   		</dt>
+										                   		<dd>
+										                   			¥<b>189.00</b>
+										                   		</dd>
+										                   		<dd>
+										                   			<i class="glyphicon glyphicon-fire"></i>
+										                   			售出：<b>0</b>笔
+										                   		</dd>
+										                   	</dl> 
+										                </div>
+							                      	</li>
+							                      	<li class="media">
+							                      		<a href="#" class="pull-left">
+							                      			<img src="img/1.svg" class="media-object">
+							                      		</a>
+										                <div class="media-body" contenteditable="true">
+										                   	<dl>
+										                   		<dt class="ellipsis-2">
+										                   			2016年新品男装长袖衬衫 橘色摩登修身衬衫
+										                   		</dt>
+										                   		<dd>
+										                   			¥<b>189.00</b>
+										                   		</dd>
+										                   		<dd>
+										                   			<i class="glyphicon glyphicon-fire"></i>
+										                   			售出：<b>0</b>笔
+										                   		</dd>
+										                   	</dl> 
+										                </div>
+							                      	</li>
+							                    </ul>
+						                    </div>
+						                  </div>
+						                </div>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						   <!--媒体列表控件-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   				<button type="button" class="btn btn-sm" data-btn = "addRow">
+						   					增加
+						   				</button>
+						   				<button type="button" class="btn btn-sm" data-btn = "decRow">
+						   					减少
+						   				</button>
+						   			</div>
+						   			<div class="preview">
+						   				媒体列表
+						   			</div>
+						   			<div class="view">
+						   				<div class="media">
+						   					<a href="#" class="pull-left">
+						   						<img src="img/1.svg" class="media-object">
+						   					</a>
+						                  <div class="media-body" contenteditable="true">
+						                    <h4 class="media-heading">嵌入媒体标题</h4>
+						                   	请尽量使用HTML5兼容的视频格式和视频代码实现视频播放, 以达到更好的体验效果. 
+						                  </div>
+						                </div>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						   <!--商品列表控件-->
+						   <li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   				<button type="button" class="btn btn-sm" data-btn = "addCol">
+						   					增加
+						   				</button>
+						   				<button type="button" class="btn btn-sm" data-btn = "decCol">
+						   					减少
+						   				</button>
+						   			</div>
+						   			<div class="preview">
+						   				商品列表
+						   			</div>
+						   			<div class="view">
+						                <ul class="pdt-group">
+						                	<li class="pdt-item">
+						                		<a href="#">
+						                			<img src="img/1.svg" />
+						                		</a>
+						                		<div class="pdt-description">
+						                			<h4>产品名称</h4>
+						                			<p class="ellipsis-2">
+						                				也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。
+						                			</p>
+						                		</div>
+						                	</li>
+						                	<li class="pdt-item">
+						                		<a href="#">
+						                			<img src="img/1.svg" />
+						                		</a>
+						                		<div class="pdt-description">
+						                			<h4>产品名称</h4>
+						                			<p class="ellipsis-2">
+						                				也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。
+						                			</p>
+						                		</div>
+						                	</li>
+						                	<li class="pdt-item">
+						                		<a href="#">
+						                			<img src="img/1.svg" />
+						                		</a>
+						                		<div class="pdt-description">
+						                			<h4>产品名称</h4>
+						                			<p class="ellipsis-2">
+						                				也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。
+						                			</p>
+						                		</div>
+						                	</li>
+						                </ul>
+						   			</div>
+						   		</div>
+						   </li>
+						   
+						   <!--代金券模块-->
+						   <!--<li>
+						   		<div class="draggable">
+						   			<a href="#close" class="remove label">
+						   				<i class="glyphicon glyphicon-remove"></i>
+						   				删除
+						   			</a>
+						   			<span class="drag label">
+						   				<i class="glyphicon glyphicon-move"></i>
+						   				拖动
+						   			</span>
+						   			<div class="configuration">
+						   				<button type="button" class="btn btn-sm" data-target="#editorModal" role="button" data-toggle="modal">
+						   					编辑
+						   				</button>
+						   			</div>
+						   			<div class="preview">
+						   				代金券模块
+						   			</div>
+						   			<div class="view">
+						                
+						   			</div>
+						   		</div>
+						   </li>-->
+						</ul>
+						
+						<!--交互组件-->
+						<!--<li>
+							<i class="glyphicon glyphicon-plus pull-left"></i>
+							<a role="button" data-toggle="collapse" href="#interactive-widget" aria-expanded="false" aria-controls="interactive-widget">
+								交互组件
+							</a>
+							<div class="icon-popover">
+								<i class="glyphicon glyphicon-question-sign pull-right"></i>
+								<div class="popover fade right">
+									<i class="arrow glyphicon glyphicon-triangle-left"></i>
+									<h4 class="popover-title">功能</h4>
+									<div class="popover-content">
+										在这里设置你的栅格布局, 栅格总数默认为12, 用空格分割每列的栅格值。
+									</div>
+								</div>
+							</div>
+						</li>-->
+						<!--交互组件 下拉列表-->
+						<!--<ul class="collapse" id="interactive-widget">
+							
+						</ul>-->
+						
+					</ul>
+				</div>
+				
+				<!--右框架-->
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main-frame">
+					<div class="ui-platform">
+						<!--旗舰店必须项-->
+						<!--<div class="must-item">
+							<a href="#">
+								<img src="img/top_banner.jpg" alt="" style="width: 100%;" />
+							</a>
+						</div>-->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--编辑模态框-->
+		<div class="modal fade in" role="dialog" id="editorModal" aria-hidden="false">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="close" data-dismiss="modal">×</a>
+					<h3>编辑</h3>
+				</div>
+				<div class="modal-body">
+					<!-- 加载编辑器的容器 -->
+				    <script id="container" name="content" type="text/plain"></script>
+				</div>
+				<div class="modal-footer">
+					<a id="savecontent" class="btn btn-primary" data-dismiss="modal">保存</a>
+					<a class="btn" data-dismiss="modal">关闭</a>
+				</div>
+			</div>
+		</div>
+		
+	    <!-- 配置文件 -->
+	    <script type="text/javascript" src="js/ueditor.config.js"></script>
+	    <!-- 编辑器源码文件 -->
+	    <script type="text/javascript" src="js/ueditor.all.js"></script>
+	    
+	    <script type="text/javascript" src="js/ueditor.parse.min.js"></script>
+	    
+	    <script type="text/javascript">
+//	    	实例化编辑器
+	        var ue = UE.getEditor('container', {
+	        	
+			    toolbars: [
+			        ['fullscreen', 'source', 'undo', 'redo', '|', 'simpleupload', 'link', 'unlink', 'pagebreak', 'preview'],
+    				['bold', 'italic', 'underline', 'fontborder', 
+    				'strikethrough', 'superscript', 'subscript',
+    				'removeformat', 'fontsize', 'autotypeset',
+    				'blockquote', 'pasteplain', '|', 'forecolor',
+    				'backcolor','insertorderedlist', 'insertunorderedlist',
+    				'selectall', 'cleardoc']
+			    ],
+			    
+			    initialFrameWidth: '100%',
+			    initialFrameHeight: 300,
+			    
+			    'enterTag':'',
+			    
+			    removeEmptyline: true //去掉空行
+			});
+			
+//			模态框保存编辑
+			$('#editorModal').on('show.bs.modal', function(event){
+				   // 触发模态框的按钮
+				  button = $(event.relatedTarget);
+				  
+				  obj = button.parent('.configuration').siblings('.view');
+				  
+				   // 触发模态框时获取view中内容
+				  var con1 = obj.html();
+				  
+				   // 设置编辑器内容
+				  ue.setContent(con1);
+			});
+			$('#savecontent').on('click',function(){
+				   // 点击保存时获取ue内容
+			  	   var con2 = ue.getContent();
+			  	
+			  	   obj.html(con2);
+//			  	   alert(obj.get(0).tagName);
+			});
+			
+	    </script>
+	    <!--<script>
+	    	var sto = window.localStorage;
+	    	window.onload = function(){
+	    		for(var i=0;i<sto.length;i++){
+	    			alert(sto.key(i)+':'+sto.getItem(sto.key(i))+'<br>')
+	    		}
+	    	}
+	    </script>-->
+	</body>
+</html>
